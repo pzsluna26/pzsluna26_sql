@@ -20,7 +20,7 @@ from book
 where price < 20000;
 
 -- 3.5 가격이 10,000원 이상 20,000원 이하인 도서를 검색하시오.
-select bookname, price
+select booknambooke, price
 from book
 -- where 10000 <=  AND price <=20000 ;
 where price BETWEEN 10000 AND 20000;
