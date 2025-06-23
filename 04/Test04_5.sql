@@ -18,8 +18,9 @@ where o.custid = c.custid and o.bookid = b.bookid;
 create view highorders (bookid, bookname, name, publisher, saleprice)
 as select b.bookid, b.bookname, c.name, b.publisher, o.saleprice
 from orders o, customer c, book b
-where o.custid = c.custid and o.bookid = b.bookid
-and saleprice >= 20000;
+where o.custid = c.custid 
+	and o.bookid = b.bookid
+	and saleprice >= 20000;
 
 -- 생성된 highorders 뷰를 이용하여 판매된 도서의 이름과 고객의 이름을 출력하는 SQL 문을 작성하시오.
 select bookname, name

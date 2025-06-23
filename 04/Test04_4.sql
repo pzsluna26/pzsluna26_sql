@@ -4,6 +4,7 @@ select orderid, saleprice
 from orders
 where saleprice <= (select avg(saleprice)
 					from orders);
+                    
 
 -- 각 고객의 평균 주문금액보다 큰 금액의 주문 내역에 대해서 주문번호, 고객번호, 금액을 나타내시오.
 select orderid '주문번호', custid '고객번호', saleprice '금액'
@@ -12,6 +13,7 @@ where saleprice >= (select avg(o.saleprice)
 					from orders o
 					join customer c on o.custid = c.custid);
                     
+
 -- 대한민국에 거주하는 고객에게 판매한 도서의 총판매액을 구하시오.
 select sum(saleprice)
 from orders o
