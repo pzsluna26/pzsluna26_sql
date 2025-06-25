@@ -39,8 +39,6 @@ where hire_date between '1987-01-01' and  '1987-12-31';
 
 
 -- (7) 사원의 이름, 입사년도, 근무년수를 출력하시오.
-select concat(fist_name, last_name), year(hire_date), count
-
 
 
 
@@ -58,6 +56,6 @@ where month(hire_date) = 6;
 
 -- (10) 부서별, 연도별 입사한 사원의 수를 구하시오.
 select department_id, year(hire_date), count(*)
-from employees
+from employeesphonebook
 group by department_id, year(hire_date)
 order by department_id;
